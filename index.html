@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot Duel – 2 Player Maze Chase</title>
+  <meta name="description" content="A colourful 2-player competitive maze chase game. Same keyboard, one winner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="title">DOT <span>DUEL</span></h1>
+
+    <section class="hud">
+      <div class="player-card p1" id="p1card">
+        <div class="name">P1 · LIME</div>
+        <div class="score" id="p1score">0</div>
+        <div class="lives" id="p1lives"></div>
+        <div class="status" id="p1status"></div>
+        <div class="keys"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div>
+      </div>
+
+      <div class="center-hud">
+        <div class="dots-left">Dots left<br><b id="dotsLeft">0</b></div>
+        <button id="restartBtn" title="Restart the game">↻ RESTART</button>
+        <button id="muteBtn" title="Toggle sound">🔊</button>
+      </div>
+
+      <div class="player-card p2" id="p2card">
+        <div class="name">P2 · BERRY</div>
+        <div class="score" id="p2score">0</div>
+        <div class="lives" id="p2lives"></div>
+        <div class="status" id="p2status"></div>
+        <div class="keys"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></div>
+      </div>
+    </section>
+
+    <div class="board">
+      <canvas id="game" width="588" height="588"></canvas>
+      <div class="overlay" id="overlay"></div>
+    </div>
+
+    <p class="help">SPACE to start · P to pause · Most points wins!</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
